@@ -30,7 +30,7 @@ describe('Test Smart Assistant Controller', () => {
       name: 'abc',
     });
     await hospital.save();
-  });
+  }, 1000000);
 
   afterAll(async () => {
     await mongoose.connection.db.dropDatabase();
@@ -56,7 +56,7 @@ describe('Test Smart Assistant Controller', () => {
     await smartAssistantController.postRequest(req, res, next);
     expect(res.status).toHaveBeenCalledWith(200);
     expect(res.json).toHaveBeenCalledWith('{}');
-  });
+  }, 1000000);
 
   test('postRequest() - Ask a meaningful question', async () => {
     const req: any = {
@@ -79,7 +79,7 @@ describe('Test Smart Assistant Controller', () => {
     await smartAssistantController.postRequest(req, res, next);
     expect(res.status).toHaveBeenCalledWith(200);
     expect(res.json).toHaveBeenCalledWith('{}');
-  });
+  }, 1000000);
 
   test('getResponse() - fetch a response message', async () => {
     const req: any = {
@@ -116,7 +116,7 @@ describe('Test Smart Assistant Controller', () => {
         },
       ],
     });
-  });
+  }, 100000);
 
   test('getHospitalInfo() - fetch a list of nearby hospitals', async () => {
     const req: any = {
@@ -153,5 +153,5 @@ describe('Test Smart Assistant Controller', () => {
         },
       ],
     });
-  });
+  }, 1000000);
 });
