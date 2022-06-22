@@ -28,7 +28,7 @@
     "@types/express-jwt": "0.0.42",
     "@types/formidable": "^1.0.31",
     "@types/gridfs-stream": "^0.5.32",
-    "async": "^3.0.1",
+    "async": "^3.2.2",
     "bcrypt-nodejs": "^0.0.3",
     "bluebird": "^3.5.5",
     "body-parser": "^1.19.0",
